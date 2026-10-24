@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ai-workspace-protocol:session-event:1.0",
+  "title": "AI Workspace Protocol — Session event",
+  "description": "Un registro JSONL por línea; excluir secretos y contenidos completos por defecto.",
+  "type": "object",
+  "required": [
+    "event_id",
+    "timestamp",
+    "session_id",
+    "platform",
+    "model",
+    "protocol_version",
+    "operating_level",
+    "project_id",
+    "event_type",
+    "severity",
+    "tool",
+    "normalized_error_signature",
+    "message_summary",
+    "evidence_refs",
+    "outcome",
+    "validated",
+    "privacy"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "platform": {
+      "type": "string",
+      "minLength": 1
+    },
+    "surface": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "protocol_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operating_level": {
+      "const": 7
+    },
+    "context_mode": {
+      "enum": [
+        "project",
+        "general"
+      ]
+    },
+    "project_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "topic_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event_type": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Ej: session_started, decision, validation, tool_error, checkpoint, handoff_written, session_closed, learning_candidate, learning_promoted, protocol_deployed."
+    },
+    "severity": {
+      "enum": [
+        "debug",
+        "info",
+        "notice",
+        "warning",
+        "error",
+        "critical"
+      ]
+    },
+    "tool": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "normalized_error_signature": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "message_summary": {
+      "type": "string"
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outcome": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "validated": {
+      "type": "boolean"
+    },
+    "privacy": {
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ]
+    },
+    "correlation_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "related_handoff_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

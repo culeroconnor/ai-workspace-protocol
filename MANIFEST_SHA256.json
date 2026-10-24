@@ -1,0 +1,63 @@
+{
+  "manifest_version": "1.0",
+  "protocol_id": "ai-workspace-protocol",
+  "protocol_version": "1.0.2-draft",
+  "status": "DERIVED_FROM_1.0.0-draft_RECONSTRUCTION",
+  "created_date": "2026-10-23",
+  "algorithm": "SHA-256",
+  "base": {
+    "protocol_version": "1.0.1-draft",
+    "canonical_sha256": "00a68441a891fb1a6e05560ea507bac328b2764a9975bbe0484d263a803a8d82",
+    "archive": "archive/1.0.1-draft/"
+  },
+  "origin": {
+    "protocol_version": "1.0.0-draft",
+    "canonical_sha256": "fe7ab25f37306d29541fd9ef28655c2f61ed72dd7b3a0ca3785016b9a11de843",
+    "zip": "archive/1.0.0-draft/AI_WORKSPACE_PROTOCOL_v1_DRAFT.zip",
+    "zip_sha256": "e0c69ba085f0d99552f4af7f2da3cacf2953a878b7c88901457e8f02dc55686c"
+  },
+  "note": "Hashes calculados sobre los bytes instalados; el manifiesto no incluye su propio hash. runtime/ es estado y queda fuera.",
+  "files": [
+    {
+      "path": "AI_WORKSPACE_PROTOCOL.md",
+      "sha256": "3e7fe57d2d40848c9d96c0824efa703c72e470624dea81fc2fa961e0cc85778f",
+      "bytes": 31575
+    },
+    {
+      "path": "README_DEPLOYMENT.md",
+      "sha256": "6149f3bd93d74cdf1ddb317d2cf6f8471637e2aaf8af8301f7050ceae5cf0678",
+      "bytes": 5808
+    },
+    {
+      "path": "schemas/handoff.schema.json",
+      "sha256": "86b26ac68ba0aeea758afebe3bcfc6f9e0f4b1608b80e669d752d459362042e1",
+      "bytes": 9061
+    },
+    {
+      "path": "schemas/handoff-index.schema.json",
+      "sha256": "d07d2d7cf48b15514472892c484261b6f7ebebda8d29c2bf3d8a2286c047b698",
+      "bytes": 2489
+    },
+    {
+      "path": "schemas/session-event.schema.json",
+      "sha256": "760d30677a84b4a9ef239c2c60eb7687e93f503f56bcb275debe6c364bdeb1d2",
+      "bytes": 2707
+    },
+    {
+      "path": "skills/session-lifecycle/SKILL.md",
+      "sha256": "c4b851fe08c6a789732c6170c294f44f196c8e9265ab041e91d27d9434db0220",
+      "bytes": 3988
+    },
+    {
+      "path": "skills/knowledge-promotion/SKILL.md",
+      "sha256": "d8436385820a633f9d7c6c074c201258fcfca951e7cd02e0e5fcb02c1ab01b99",
+      "bytes": 2940
+    },
+    {
+      "path": "specs/NIVEL_7.md",
+      "sha256": "d2ce7053153f2b05d94a62a8ca9fbe8071fb8ffc2252f91dc9498f5a915504c3",
+      "bytes": 9273,
+      "revision": 3
+    }
+  ]
+}

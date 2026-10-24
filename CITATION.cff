@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this protocol, specification, or runtime in your research or software, please cite it as below."
+title: "AI Workspace Protocol (AIWP): Universal Context Continuity and Handoff across LLMs"
+authors:
+  - given-names: "Gastón"
+    family-names: "Lefort"
+date-released: 2026-10-23
+version: "1.0.2-draft"
+license: "MIT"
+url: "https://github.com/culeroconnor/ai-workspace-protocol"
+keywords:
+  - "artificial-intelligence"
+  - "multi-agent"
+  - "context-continuity"
+  - "agentic-coding"
+  - "llm"
+  - "chatgpt"
+  - "claude"
+  - "gemini"
+  - "antigravity"
+  - "codex"
+abstract: >-
+  The AI Workspace Protocol (AIWP) establishes a verifiable, vendor-neutral contract
+  enabling disparate Large Language Models (ChatGPT, Claude, Gemini/Antigravity, Codex)
+  to start, execute, interrupt, transfer, and resume development sessions with cryptographic
+  state verification and zero loss of operational context.

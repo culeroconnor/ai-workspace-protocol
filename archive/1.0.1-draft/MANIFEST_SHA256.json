@@ -1,0 +1,53 @@
+{
+  "manifest_version": "1.0",
+  "protocol_id": "ai-workspace-protocol",
+  "protocol_version": "1.0.1-draft",
+  "status": "DERIVED_FROM_1.0.0-draft_RECONSTRUCTION",
+  "created_date": "2026-10-23",
+  "algorithm": "SHA-256",
+  "base": {
+    "protocol_version": "1.0.0-draft",
+    "canonical_sha256": "fe7ab25f37306d29541fd9ef28655c2f61ed72dd7b3a0ca3785016b9a11de843",
+    "zip": "archive/1.0.0-draft/AI_WORKSPACE_PROTOCOL_v1_DRAFT.zip",
+    "zip_sha256": "8ae115065b8257fbb72cdecdf8ea18818ba270d52ed0d38e2dc3d5b8b20bdc07"
+  },
+  "note": "Hashes calculados sobre los bytes instalados; el manifiesto no incluye su propio hash.",
+  "files": [
+    {
+      "path": "AI_WORKSPACE_PROTOCOL.md",
+      "sha256": "00a68441a891fb1a6e05560ea507bac328b2764a9975bbe0484d263a803a8d82",
+      "bytes": 26486
+    },
+    {
+      "path": "README_DEPLOYMENT.md",
+      "sha256": "e6b710451fb523fc9dd088e1f009d4b11d2bb50c9d606f603bce0021a2f1b1e6",
+      "bytes": 5753
+    },
+    {
+      "path": "schemas/handoff.schema.json",
+      "sha256": "cc48bbede91eb2c30b196a8bdfbfbfcdaac1ebafaab1dd8c91d8c28371675bd6",
+      "bytes": 8647
+    },
+    {
+      "path": "schemas/session-event.schema.json",
+      "sha256": "760d30677a84b4a9ef239c2c60eb7687e93f503f56bcb275debe6c364bdeb1d2",
+      "bytes": 2707
+    },
+    {
+      "path": "skills/session-lifecycle/SKILL.md",
+      "sha256": "55085d530de75e0f9cfb46f7b1eff056774718db8cc0079408746a01d1095091",
+      "bytes": 3873
+    },
+    {
+      "path": "skills/knowledge-promotion/SKILL.md",
+      "sha256": "56643f44ce432697e01172dfaaa9b488de2f8b1922bf62c5d80c78754f554dac",
+      "bytes": 2902
+    },
+    {
+      "path": "specs/NIVEL_7.md",
+      "sha256": "b4d479dd7f619cc703c5eda0188ef3b92bec34361f7600359d0789e70052bf05",
+      "bytes": 9137,
+      "revision": 2
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.1",
+  "handoff_id": "example-20261023-feature-auth",
+  "created_at": "2026-10-23T21:00:00Z",
+  "protocol_version": "1.0.2-draft",
+  "operating_level": 7,
+  "source": {
+    "platform": "claude",
+    "surface": "claude-code-cli",
+    "model": "claude-3-7-sonnet",
+    "session_id": "sess-demo-987"
+  },
+  "scope": {
+    "context_mode": "project",
+    "project_id": "demo_web_app",
+    "project_root": "/projects/demo_web_app",
+    "git_branch": "main",
+    "topic_id": null
+  },
+  "objective": "Implement OAuth2 JWT authentication flow with refresh tokens",
+  "status": "ready",
+  "completed": [
+    "Created auth middleware in src/middleware/auth.ts",
+    "Added JWT signing and verification service",
+    "Implemented 4 integration unit tests for token expiration"
+  ],
+  "validated": [
+    {
+      "claim": "All 4 authentication unit tests pass with 100% assertions",
+      "method": "npm test -- src/tests/auth.test.ts",
+      "evidence_ref": "src/tests/auth.test.ts",
+      "verified_at": "2026-10-23T20:58:30Z"
+    },
+    {
+      "claim": "SHA-256 of auth middleware is stable",
+      "method": "sha256sum src/middleware/auth.ts",
+      "evidence_ref": "src/middleware/auth.ts",
+      "verified_at": "2026-10-23T20:59:10Z"
+    }
+  ],
+  "decisions": [
+    {
+      "decision": "Use RS256 asymmetric keys instead of HS256 shared secret",
+      "rationale": "Enables microservices to verify tokens without access to private key",
+      "authority": "USER_EXPLICIT"
+    }
+  ],
+  "files_changed": [
+    {
+      "path": "src/middleware/auth.ts",
+      "change_summary": "Initial implementation of JWT validation middleware",
+      "hash_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    }
+  ],
+  "errors": [],
+  "risks": [
+    "Rate limiting is not yet implemented on the /api/token/refresh endpoint"
+  ],
+  "unresolved": [
+    "Confirm Redis cluster connection URL for token blacklisting"
+  ],
+  "next_actions": [
+    "Open src/routes/auth.ts and connect refresh token route to Redis blacklist",
+    "Implement rate limiting middleware on /api/token/refresh",
+    "Run full regression test suite with: npm run test:all"
+  ],
+  "authority_sources": [
+    "AI_WORKSPACE_PROTOCOL.md"
+  ],
+  "checkpoints": [
+    {
+      "type": "git_commit",
+      "ref": "8f3b2a1c9e8d7a6b5c4d3e2f1a0b9c8d7e6f5a4b",
+      "description": "Auth middleware passing all unit tests, clean working tree"
+    }
+  ],
+  "log_refs": [],
+  "knowledge_candidates": [],
+  "privacy": {
+    "classification": "internal",
+    "secrets_included": false,
+    "redactions": []
+  }
+}

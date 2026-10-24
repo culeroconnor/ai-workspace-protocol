@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ai-workspace-protocol:handoff-index:1.0",
+  "title": "AI Workspace Protocol - Índice global de handoffs",
+  "description": "Una entrada vigente por alcance (project_id o topic_id). Ver §5.4 del canónico.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol_version",
+    "updated_at",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "protocol_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "scope_key",
+          "context_mode",
+          "handoff_id",
+          "path",
+          "sha256",
+          "status",
+          "created_at",
+          "source_platform"
+        ],
+        "properties": {
+          "scope_key": {
+            "type": "string",
+            "minLength": 1,
+            "description": "project_id en modo project; topic_id en modo general"
+          },
+          "context_mode": {
+            "enum": [
+              "project",
+              "general"
+            ]
+          },
+          "workspace": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "handoff_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^runtime/handoffs/[^/]+/handoff\\.json$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "status": {
+            "enum": [
+              "ready",
+              "consumed",
+              "superseded",
+              "blocked"
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source_platform": {
+            "type": "string",
+            "minLength": 1
+          },
+          "consumed_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "consumed_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
